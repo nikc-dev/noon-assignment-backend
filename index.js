@@ -36,7 +36,6 @@ Route to handle POST reqs from /home page to store favourites.
 Returns FavItems Count
 */
 app.post('/', (req, res) => {
-    console.log(req.body)
     favItems.push(req.body)
     res.send({ 'favsCount': favItems.length })
 });
@@ -45,7 +44,7 @@ app.post('/', (req, res) => {
 Route to handle DELETE reqs from / page to delete favourites 
 Returns Updated FavItems Count
 */
-app.delete('/', (req, res) => {
+app.delete('/favs', (req, res) => {
     favItems = favItems.filter(item => req.body.id !== item.id )
     res.send({ 'favsCount': favItems.length })
 });
@@ -55,3 +54,5 @@ app.delete('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server listening on http://127.0.0.1:${port}/`)
 });
+
+module.exports = app
