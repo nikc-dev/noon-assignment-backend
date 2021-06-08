@@ -1,0 +1,17 @@
+{
+  "name": "backend_nodejs",
+  "version": "1.0.0",
+  "description": "A simple Node Server that can handle GET and POST request from the front-end to save user favouritated items. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.json"
+  },
+  "author": "Nikhil Chandrashekar <nikilchandrashekar@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4"
+  }
+}
